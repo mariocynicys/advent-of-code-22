@@ -1,10 +1,11 @@
 <img src="./.assets/christmas_ferris.png" width="164">
 
-# 🎄 Advent of Code {year}
+# 🎄 Advent of Code 2022
 
 Solutions for [Advent of Code](https://adventofcode.com/) in [Rust](https://www.rust-lang.org/).
 
 <!--- advent_readme_stars table --->
+<sub><sup>Join the private leaderboard: `1274187-6878b62b`</sup></sub>
 
 ---
 
