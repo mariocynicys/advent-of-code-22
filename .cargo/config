@@ -1,6 +1,6 @@
 [alias]
 scaffold = "run --bin scaffold -- "
 download = "run --bin download -- "
-
+open = "run --bin open"
 solve = "run --bin"
 all = "run"
