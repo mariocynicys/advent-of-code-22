@@ -1,11 +1,10 @@
 #![allow(unused_variables,unused_imports)]
-use contest_algorithms;
 
 fn common(input: &str) -> Vec<u32> {
     let mut elf_cal = vec![0];
-    for line in input.split("\n") {
+    for line in input.split('\n') {
         let line = line.trim();
-        if line == "" {
+        if line.is_empty() {
             elf_cal.push(0);
         } else {
             *elf_cal.last_mut().unwrap() += line.parse::<u32>().unwrap();
@@ -37,7 +36,7 @@ fn main() {
 }
 
 #[cfg(test)]
-mod tests {
+mod t1 {
     use super::*;
 
     #[test]

@@ -26,7 +26,7 @@ fn main() {
 }
 
 #[cfg(test)]
-mod tests {
+mod tDAY {
     use super::*;
 
     #[test]
