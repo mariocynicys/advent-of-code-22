@@ -8,7 +8,10 @@ use std::{
     process,
 };
 
-const MODULE_TEMPLATE: &str = r###"pub fn part_one(input: &str) -> Option<u32> {
+const MODULE_TEMPLATE: &str = r###"#![allow(unused_variables,unused_imports)]
+use contest_algorithms;
+
+pub fn part_one(input: &str) -> Option<u32> {
     None
 }
 
