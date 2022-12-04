@@ -1,4 +1,4 @@
-#![allow(unused_variables,unused_imports)]
+#![allow(unused_variables, unused_imports)]
 
 #[derive(PartialEq, Eq, Debug, Clone)]
 enum Play {
@@ -61,7 +61,7 @@ impl Play {
         possibilities[0].clone()
     }
 
-    fn score_for_outcome(outcome: &str, op:&Self) -> u32 {
+    fn score_for_outcome(outcome: &str, op: &Self) -> u32 {
         let play = match outcome {
             "X" => op.lose(),
             "Y" => op.draw(),
@@ -76,7 +76,9 @@ pub fn part_one(input: &str) -> Option<u32> {
     let mut tot_score = 0;
     for line in input.split('\n') {
         let plays: Vec<&str> = line.split_whitespace().collect();
-        if plays.is_empty() { continue };
+        if plays.is_empty() {
+            continue;
+        };
         let elf = Play::from(plays[0].trim());
         let me = Play::from(plays[1].trim());
         tot_score += me.score_against(&elf);
@@ -88,7 +90,9 @@ pub fn part_two(input: &str) -> Option<u32> {
     let mut tot_score = 0;
     for line in input.split('\n') {
         let plays: Vec<&str> = line.split_whitespace().collect();
-        if plays.is_empty() { continue };
+        if plays.is_empty() {
+            continue;
+        };
         let elf = Play::from(plays[0].trim());
         let outcome = plays[1].trim();
         tot_score += Play::score_for_outcome(outcome, &elf);

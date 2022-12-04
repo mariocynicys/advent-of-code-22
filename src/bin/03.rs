@@ -1,4 +1,4 @@
-#![allow(unused_variables,unused_imports)]
+#![allow(unused_variables, unused_imports)]
 use std::collections::HashSet;
 
 fn ascii_to_priority(ascii: u8) -> u8 {
@@ -16,7 +16,12 @@ pub fn part_one(input: &str) -> Option<u32> {
     let input = input.trim_end();
     for line in input.split('\n') {
         // Skip the first split element as it will be an empty string.
-        let mut chars: Vec<String> = line.trim().split("").map(|s| s.to_string()).skip(1).collect();
+        let mut chars: Vec<String> = line
+            .trim()
+            .split("")
+            .map(|s| s.to_string())
+            .skip(1)
+            .collect();
         // Skip the last element as it will be an empty string.
         chars.pop();
         // Get the first and second compartment.
@@ -39,7 +44,12 @@ pub fn part_two(input: &str) -> Option<u32> {
         let mut intersec: Option<HashSet<String>> = None;
         for line in lines {
             // Skip the first split element as it will be an empty string.
-            let mut chars: Vec<String> = line.trim().split("").map(|s| s.to_string()).skip(1).collect();
+            let mut chars: Vec<String> = line
+                .trim()
+                .split("")
+                .map(|s| s.to_string())
+                .skip(1)
+                .collect();
             // Skip the last element as it will be an empty string.
             chars.pop();
             let chars_set: HashSet<String> = HashSet::from_iter(chars);

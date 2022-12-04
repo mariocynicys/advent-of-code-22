@@ -9,7 +9,9 @@ fn main() {
         "code".to_string()
     };
 
-    let problem: u32 = pico_args::Arguments::from_env().free_from_str().expect("What problem should be opened?");
+    let problem: u32 = pico_args::Arguments::from_env()
+        .free_from_str()
+        .expect("What problem should be opened?");
 
     process::Command::new(&editor)
         .arg(format!("src/bin/{:02}.rs", problem))

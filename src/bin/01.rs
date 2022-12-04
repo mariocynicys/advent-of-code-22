@@ -1,4 +1,4 @@
-#![allow(unused_variables,unused_imports)]
+#![allow(unused_variables, unused_imports)]
 
 fn common(input: &str) -> Vec<u32> {
     let mut elf_cal = vec![0];
