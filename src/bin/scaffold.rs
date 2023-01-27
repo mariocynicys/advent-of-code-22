@@ -9,7 +9,10 @@ use std::{
 };
 
 const MODULE_TEMPLATE: &str = r###"#![allow(unused_variables, unused_imports)]
-use contest_algorithms;
+
+fn parse_input(input: &str) -> Type {
+    
+}
 
 pub fn part_one(input: &str) -> Option<u32> {
     None
